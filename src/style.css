@@ -1,0 +1,54 @@
+.vt-transfer {
+    position: relative;
+}
+
+.vt-transfer--list,
+.vt-transfer--operation {
+    display: inline-block;
+}
+
+.vt-transfer--list {
+    font-size: 12px;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: middle;
+    position: relative;
+    width: 180px;
+    padding: 5px;
+}
+.vt-transfer--content{
+    height:180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.vt-transfer--count{
+    padding-left:2px;
+    padding-right:4px;
+}
+.vt-transfer--search{
+    width:100%;
+    margin-bottom:5px;
+    margin-top:5px;
+}
+
+.vt-search--input{
+    border-radius:3px;
+    padding:5px;
+    border:1px solid rgba(10,10,10,.2);
+    width:100%;
+}
+.vt-transfer--empty{
+    text-align: center;
+    margin-top:30%;
+}
+
+.vt-transfer--operation {
+    overflow: hidden;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.vt-operation--right {
+    margin-top: 5px;
+}

@@ -1,0 +1,56 @@
+<div class="vt-transfer">
+    <ul class="vt-transfer--list">
+        <li v-if="showHeader" class="vt-transfer--header">
+            <Checkboxs v-model="allSource">
+                <span class="vt-transfer--count">{{selectedSources.length}}/{{sources.length}}</span>项
+            </Checkboxs>
+        </li>
+        <li class="vt-transfer--body">
+            <div v-if="showSearch" class="vt-transfer--search">
+                <input v-model="searchSource" type="text" placeholder="搜索" class="vt-search--input">
+            </div>
+            <div class="vt-transfer--content">
+                <ul class="vt-transfer--items" v-if="sources.length">
+                    <li class="vt-transfer--item" v-for="t in filterSources">
+                        <Checkboxs v-model="t.checked"></Checkboxs>
+                        <span>{{t[showField]}}</span>
+                    </li>
+                </ul>
+                <div v-else class="vt-transfer--empty">
+                    {{emptyInfo}}
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="vt-transfer--operation">
+        <li class="vt-operation--left" @click="add">
+            <Buttons :disabled="selectedSources.length == 0" type="primary" size="small">&gt;</Buttons>
+        </li>
+        <li class="vt-operation--right"  @click="remove">
+            <Buttons :disabled="selectedTargets.length == 0" type="primary" @click="remove" size="small">&lt;</Buttons>
+        </li>
+    </ul>
+    <ul class="vt-transfer--list">
+        <li v-if="showHeader" class="vt-transfer--header">
+            <Checkboxs v-model="allTarget">
+                <span class="vt-transfer--count">{{selectedTargets.length}}/{{targets.length}}</span>项
+            </Checkboxs>
+        </li>
+        <li class="vt-transfer--body">
+            <div v-if="showSearch" class="vt-transfer--search">
+                <input v-model="searchTarget" type="text" placeholder="搜索" class="vt-search--input">
+            </div>
+            <div class="vt-transfer--content">
+                <ul class="vt-transfer--items" v-if="targets.length">
+                    <li class="vt-transfer--item" v-for="t in filterTargets">
+                        <Checkboxs v-model="t.checked"></Checkboxs>
+                        <span>{{t[showField]}}</span>
+                    </li>
+                </ul>
+                <div v-else class="vt-transfer--empty">
+                    {{emptyInfo}}
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
