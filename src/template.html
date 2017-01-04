@@ -1,53 +1,53 @@
-<div class="vt-transfer">
-    <ul class="vt-transfer--list">
-        <li v-if="showHeader" class="vt-transfer--header">
+<div class="ui-transfer">
+    <ul class="ui-transfer__list">
+        <li v-if="showHeader" class="ui-transfer__header">
             <Checkboxs v-model="allSource">
-                <span class="vt-transfer--count">{{selectedSources.length}}/{{sources.length}}</span>项
+                <span class="ui-transfer--count">{{selectedSources.length}}/{{sources.length}}</span>项
             </Checkboxs>
         </li>
-        <li class="vt-transfer--body">
-            <div v-if="showSearch" class="vt-transfer--search">
-                <input v-model="searchSource" type="text" placeholder="搜索" class="vt-search--input">
+        <li class="ui-transfer__body">
+            <div v-if="showSearch" class="ui-transfer__search">
+                <input v-model="searchSource" type="text" placeholder="搜索" class="ui-search--input">
             </div>
-            <div class="vt-transfer--content">
-                <ul class="vt-transfer--items" v-if="sources.length">
-                    <li class="vt-transfer--item" v-for="t in filterSources">
+            <div class="ui-transfer--content">
+                <ul class="ui-transfer--items" v-if="sources.length">
+                    <li class="ui-transfer--item" v-for="t in filterSources">
                         <Checkboxs v-model="t.checked"></Checkboxs>
                         <span>{{t[showField]}}</span>
                     </li>
                 </ul>
-                <div v-else class="vt-transfer--empty">
+                <div v-else class="ui-transfer--empty">
                     {{emptyInfo}}
                 </div>
             </div>
         </li>
     </ul>
-    <ul class="vt-transfer--operation">
-        <li class="vt-operation--left" @click="add">
+    <ul class="ui-transfer__operation">
+        <li class="ui-operation--left" @click="add">
             <Buttons :disabled="selectedSources.length == 0" type="primary" size="small">&gt;</Buttons>
         </li>
-        <li class="vt-operation--right"  @click="remove">
+        <li class="ui-operation--right"  @click="remove">
             <Buttons :disabled="selectedTargets.length == 0" type="primary" @click="remove" size="small">&lt;</Buttons>
         </li>
     </ul>
-    <ul class="vt-transfer--list">
-        <li v-if="showHeader" class="vt-transfer--header">
+    <ul class="ui-transfer__list">
+        <li v-if="showHeader" class="ui-transfer__header">
             <Checkboxs v-model="allTarget">
-                <span class="vt-transfer--count">{{selectedTargets.length}}/{{targets.length}}</span>项
+                <span class="ui-transfer--count">{{selectedTargets.length}}/{{targets.length}}</span>项
             </Checkboxs>
         </li>
-        <li class="vt-transfer--body">
-            <div v-if="showSearch" class="vt-transfer--search">
-                <input v-model="searchTarget" type="text" placeholder="搜索" class="vt-search--input">
+        <li class="ui-transfer--body">
+            <div v-if="showSearch" class="ui-transfer__search">
+                <input v-model="searchTarget" type="text" placeholder="搜索" class="ui-search--input">
             </div>
-            <div class="vt-transfer--content">
-                <ul class="vt-transfer--items" v-if="targets.length">
-                    <li class="vt-transfer--item" v-for="t in filterTargets">
+            <div class="ui-transfer__content">
+                <ul class="ui-transfer__items" v-if="targets.length">
+                    <li class="ui-transfer__item" v-for="t in filterTargets">
                         <Checkboxs v-model="t.checked"></Checkboxs>
                         <span>{{t[showField]}}</span>
                     </li>
                 </ul>
-                <div v-else class="vt-transfer--empty">
+                <div v-else class="ui-transfer--empty">
                     {{emptyInfo}}
                 </div>
             </div>

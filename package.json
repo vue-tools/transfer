@@ -1,14 +1,14 @@
 {
-  "name": "transfer",
-  "version": "0.1.1",
+  "name": "vt-transfer",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vue-tools/transfer"
+    "url": "https://github.com/vue-tools/vt-transfer"
   },
   "main": "dist/index.vue",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vue-tools/transfer/issues"
+    "url": "https://github.com/vue-tools/vt-transfer/issues"
   },
   "babel": {
     "presets": [
@@ -18,7 +18,11 @@
       "transform-runtime"
     ]
   },
-  "homepage": "https://github.com/vue-tools/transfer#readme",
+  "homepage": "https://github.com/vue-tools/vt-transfer#readme",
+  "dependencies": {
+    "vt-checkbox": "^1.0.0",
+    "vt-button": "^1.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
@@ -26,8 +30,6 @@
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
     "vue": "^2.1.6",
-    "checkbox": "vue-tools/checkbox",
-    "button": "vue-tools/button",
     "webpack": "^1.14.0"
   },
   "scripts": {

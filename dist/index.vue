@@ -1,8 +1,8 @@
 <style src="./style.css"></style>
 <template src="./template.html"></template>
 <script>
-    import Checkboxs from 'checkbox/dist/index.vue'
-    import Buttons from 'button/dist/index.vue'
+    import Checkboxs from 'vt-checkbox/dist/index.vue'
+    import Buttons from 'vt-button/dist/index.vue'
     export default {
         props: {
             showSearch: {
