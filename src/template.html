@@ -7,9 +7,9 @@
         </li>
         <li class="ui-transfer__body">
             <div v-if="showSearch" class="ui-transfer__search">
-                <input v-model="searchSource" type="text" placeholder="搜索" class="ui-search--input">
+                <input v-model="searchSource" type="text" placeholder="搜索" class="ui-search__input">
             </div>
-            <div class="ui-transfer--content">
+            <div class="ui-transfer__content">
                 <ul class="ui-transfer--items" v-if="sources.length">
                     <li class="ui-transfer--item" v-for="t in filterSources">
                         <Checkboxs v-model="t.checked"></Checkboxs>
@@ -38,7 +38,7 @@
         </li>
         <li class="ui-transfer--body">
             <div v-if="showSearch" class="ui-transfer__search">
-                <input v-model="searchTarget" type="text" placeholder="搜索" class="ui-search--input">
+                <input v-model="searchTarget" type="text" placeholder="搜索" class="ui-search__input">
             </div>
             <div class="ui-transfer__content">
                 <ul class="ui-transfer__items" v-if="targets.length">
